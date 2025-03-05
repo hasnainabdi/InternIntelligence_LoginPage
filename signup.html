@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Section (Video) -->
+        <div class="video-section">
+            <video autoplay muted loop>
+                <source src="assest/Untitled design.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Right Section (Signup Form) -->
+        <div class="form-section">
+            <h2>Sign Up</h2>
+
+            <form action="index.html">
+                <div class="input-group">
+                    <input type="text" id="name" name="name" autocomplete="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" id="email" name="email" autocomplete="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="password" name="password" autocomplete="current-password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="confirm-password" name="confirm-password" autocomplete="new-password" placeholder="Confirm your password" required>
+                </div>
+
+                <button type="submit" class="btn">Create Account</button>
+
+                <div class="links">
+                    <p>Already have an account? <a href="index.html">Log In</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Section (Video) -->
+        <div class="video-section">
+            <video autoplay muted loop>
+                <source src="assest/Untitled design.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Right Section (Login Form) -->
+        <div class="form-section">
+            <h2>Log In</h2>
+
+            <form>
+                <div class="input-group">
+                    <input type="email" id="email" name="email" autocomplete="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="password" name="password" autocomplete="current-password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="remember-me">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember Me</label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn">Sign In</button>
+
+                <div class="links">
+                    <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/firebase-messaging-sw.js")
+        .then((registration) => {
+            console.log("Service Worker Registered with scope:", registration.scope);
+        }).catch((err) => {
+            console.log("Service Worker registration failed:", err);
+        });
+}
+    </script>
+</body>
+</html>

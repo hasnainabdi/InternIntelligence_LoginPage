@@ -114,3 +114,20 @@ document.getElementById("forgotPasswordForm")?.addEventListener("submit", functi
         });
 });
 
+
+function forgotPassword() {
+    var email = document.getElementById("email").value; // Email input field ka ID
+    if (email === "") {
+        alert("Please enter your email");
+        return;
+    }
+
+    auth.sendPasswordResetEmail(email)
+        .then(() => {
+            alert("Password reset link sent to your email. Check your inbox!");
+        })
+        .catch((error) => {
+            console.error(error);
+            alert(error.message);
+        });
+}
